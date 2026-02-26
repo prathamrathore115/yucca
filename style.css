@@ -1,0 +1,391 @@
+@font-face {
+  font-family: magnet;
+  font-weight: 100;
+  src: url(./font/magnetik-lighter.otf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* html,
+body {
+  width: 100%;
+  height: 100%;
+} */
+
+body{
+  background-color: #dfdac6;
+}
+
+.top-nav {
+  display: flex;
+  gap: 50px;
+  position: absolute;
+  padding: 20px 150px;
+  z-index: 1;
+  border-bottom: 1px solid black;
+  width: 100%;
+  transition: background-color ease 0.4s;
+}
+
+.tags-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  width: 135px;
+}
+
+.top-nav-btn-container {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  gap: 15px;
+}
+
+.top-nav:hover {
+  background-color: #fffdf5;
+}
+
+.top-nav-btn-container > img {
+  width: 30px;
+  border: 2px solid rgb(102, 102, 102);
+  border-radius: 5px;
+}
+
+.credit {
+  display: flex;
+  gap: 10px;
+  color: rgb(99, 99, 99);
+}
+
+main {
+  /* width: 100vw; */
+  /* height: 00%; */
+  transform-origin: top;
+  /* transition: padding 2s linear; */
+  display: flex;
+  /* justify-content: center;
+  align-items: flex-end; */
+  background: url(https://yucca.co.za/wp-content/uploads/2025/09/yucca-packaging-homepage-intro-plastic-cups-for-iced-chilled-drinks-2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 150px 150px 0px 150px;
+  position: relative;
+}
+
+.main-container {
+  /* height: 10%; */
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid black; */
+  /* gap: 40px; */
+}
+
+.main-heading {
+  /* overflow: hidden; */
+  width: 50%;
+  /* height: 50%; */
+  /* border: 1px solid black; */
+}
+
+.main-heading h1 {
+  font-size: 70px;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  font-weight: 300;
+  line-height: 90px;
+  color: #1d1d1b;
+}
+
+.cards {
+  /* position: absolute; */
+  /* width: auto; */
+  /* border: 2px solid black; */
+  /* bottom: 0; */
+  height: 275px;
+  display: flex;
+  padding: 10px;
+  gap: 10px;
+}
+
+.card {
+  overflow: hidden;
+  background: transparent;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  width: 25%;
+  height: 100%;
+  border-radius: 20px;
+  transition: background-color ease 0.75s;
+  cursor: pointer;
+  /* background-color: red; */
+}
+
+.card-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.content {
+  opacity: 0;
+  /* background-color: red; */
+}
+
+.content div{
+    /* background-color: red; */
+    height: 40px;
+    overflow: hidden;
+  }
+.content div p{
+  /* font-size: 14px; */
+  transform: translate(0%, -100%);
+    transition: transform ease .5s;
+  }
+  
+.card:hover .content div p{
+  transform: translate(0%, 0%);
+}
+
+.line {
+  width: 0%;
+  height: 0.5px;
+  background-color: black;
+  transition: width ease 1s;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  /* border: 2px solid black; */
+  /* visibility: hidden; */
+  background-color: rgba(255, 255, 255, 0.222);
+  backdrop-filter: blur(20px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  /* transform: translate(0%, 100%); */
+
+  transition: opacity ease 0.8s;
+}
+
+.overlay div {
+  height: 35px;
+  /* border: 2px solid black; */
+  overflow: hidden;
+}
+
+.overlay h1 {
+  font-weight: lighter;
+  color: rgba(46, 46, 46, 0.948);
+  transform: translate(0%, 0%);
+  transition: transform ease 0.4s;
+}
+
+.card:hover .overlay h1 {
+  /* opacity: 0; */
+  transform: translate(0%, -100%);
+}
+.card:hover .overlay {
+  opacity: 0;
+  /* transform: translate(0%, -100%); */
+}
+
+.card:hover {
+  background-color: white;
+}
+.card:hover .content {
+  opacity: 1;
+  transform: translate(0%, 0%);
+}
+.card:hover .line {
+  width: 100%;
+}
+
+.section1 {
+  height: 100vh;
+  background-color: #dfdac6;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  position: relative;
+}
+
+.marquees-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+  width: 100%;
+  height: 50%;
+  /* background-color: red; */
+  /* border: 2px solid black; */
+}
+
+.marquee-divs {
+  width: 100%;
+  padding: 40px;
+  /* background-color: yellow; */
+  display: flex;
+  align-items: center;
+}
+/* 
+h1{
+  font-size: 40px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+} */
+
+.marquee-content-container {
+  display: flex;
+  width: max-content;
+  height: 100%;
+  align-items: center;
+  gap: 20px;
+  /* overflow: hidden; */
+  animation: marquee 6s infinite linear ;
+  /* transform: translateX(-1%); */
+}
+
+.marquee-content-container h1 {
+  flex-shrink: 0;
+  font-size: 40px;
+  
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+
+  font-weight: 400;
+}
+
+@keyframes marquee {
+  0%{
+    transform: translateX(-50%);
+  } 
+  100%{
+    transform: translateX(0%);
+  }
+}
+
+.section2{
+  position: relative;
+  height: 100vh;
+  display: flex;
+  /* justify-content: center; */
+  /* margin: auto; */
+  align-items: center;
+}
+
+.section2 .cards{
+  margin: auto;
+  width: 65%;
+  height: 50%;
+  /* justify-content: space-between; */
+  gap: 42px;
+  
+}
+.section2 .cards .card .overlay div h1{
+  color: white;
+  /* font-weight: bold; */
+  
+}
+.section2 .cards .card .overlay{
+  backdrop-filter: blur(20px);
+}
+.section2 .cards .card{
+  margin: auto;
+  /* justify-content: space-between; */
+  width: unset;
+  /* gap: 20px; */
+  transition:  scale ease .5s;
+}
+
+.section2{
+  transition: all 0.5s ease;
+  background-size: 110%;
+  background-position: center;
+  filter: brightness(.8);
+  
+  background-image: url(background1.jpg.jpeg);
+  overflow: hidden;
+}
+
+.section2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: 110%;
+  background-repeat: no-repeat;
+  transition: opacity 0.5s ease, background-size 0.5s ease;
+  opacity: 0;
+  z-index: 0;
+}
+
+.section2:has(.cards .card:first-child:hover  ) {
+  background-image: url(background1.jpg.jpeg);
+  background-size: 100%;
+}
+.section2:has(.cards .card:nth-child(2):hover)::before {
+  background-image: url(background2.jpg.jpeg);
+  opacity: 1;
+  background-size: 100%;
+}
+.section2:has(.cards .card:nth-child(3):hover) {
+  background-image: url(background3.jpg.jpeg);
+  background-size: 100%;
+}
+
+.section2 > * {
+  position: relative;
+  z-index: 2;
+}
+
+.section2 .cards .card:first-child:hover {
+  scale: 1.2;
+  z-index: 10;
+}
+.section2 .cards .card:nth-child(2):hover {
+  scale: 1.2;
+  z-index: 10;
+}
+.section2 .cards .card:nth-child(3):hover {
+  scale: 1.2;
+  z-index: 10;
+}
