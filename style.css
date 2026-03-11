@@ -586,7 +586,7 @@ h1{
 }
 
 .section5 {
-  height: 80vh;
+  /* height: 80vh; */
   color: white;
   background-color: #12271d;
   border-top: 1px solid white;
@@ -645,17 +645,29 @@ h1{
   /* height: 40px; */
 }
 
-.section5-marquee{
+.section5-marquee {
   border-top: 1px solid white;
   border-bottom: 1px solid white;
   overflow: hidden;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  margin-bottom: 60px;
 }
 
 .section5-marquee .track {
   display: flex;
   align-items: center;
-  padding: 30px 0; 
+  padding: 30px 0;
   animation: section5-marquee 6s infinite linear;
 }
 .section5-marquee .track > div {
@@ -676,4 +688,299 @@ h1{
   100% {
     transform: translateX(-60%);
   }
+}
+
+.section6 {
+  /* height: 100vh; */
+  background-color: #fffdf5;
+  padding: 60px 150px;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+
+.section6-grid {
+  display: grid;
+  column-gap: 60px;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+}
+
+.section6-grid h1,
+.section6-grid p {
+  padding-bottom: 60px;
+}
+
+.section6-grid h1 {
+  font-size: 40px;
+  font-weight: normal;
+}
+.section6-grid h2 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 30px;
+  font-weight: normal;
+  padding: 10px;
+  border-bottom: 1px solid #dfdac6;
+}
+.section6-grid h2 div {
+  font-size: 40px;
+}
+
+.section7-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  padding: 40px 150px;
+  background-color: #f7f4e9;
+}
+
+.section7-grid > div {
+  display: flex;
+  padding: 12px;
+}
+
+.section7-grid > div:first-child {
+  flex-direction: column;
+  gap: 20px;
+  justify-content: unset;
+  align-items: unset;
+  border: unset;
+  grid-row: 1/6;
+  grid-column: 1/2;
+}
+.section7-grid > div:first-child > div {
+  font-size: unset;
+  width: 50%;
+}
+.section7-grid > div:first-child > div > h2 {
+  font-size: 30px;
+  font-weight: normal;
+}
+.section7-grid > div:first-child > div > button {
+  padding: 5px 10px;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+}
+
+.section7-grid > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #a09e97;
+}
+.section7-grid > div > p {
+  font-size: 20px;
+  transition: padding 0.5s ease;
+}
+.section7-grid > div > div {
+  font-size: 30px;
+}
+
+.section7-grid > div:hover > p {
+  padding-left: 10px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 150px;
+  gap: 150px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.footer-title {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-title > h1 {
+  font-size: 45px;
+  font-weight: normal;
+}
+.footer-title > button {
+  background-color: transparent;
+  position: relative; 
+  padding: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid #1d1d1b;
+  transition:  border-radius .5s ease;
+}
+
+.footer-title > button:hover{
+  border-radius: 20px;
+
+}
+
+.footer-title > button:hover > div:nth-child(2) {
+  top: 0;
+}
+
+.footer-title > button > div {
+  width: 100%;
+  height: 100%;
+}
+
+.footer-title > button img {
+  transform: rotate(270deg);
+}
+
+.footer-title > button > div:first-child {
+  transition: top 0.5s ease;
+  top: 0;
+  position: relative;
+}
+.footer-title > button:hover > div:first-child {
+  top: -125%;
+}
+.footer-title > button > div:nth-child(2) {
+  transition: top 0.5s ease;
+  background-color: black;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.footer-content{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+
+.footer-cards{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  
+}
+
+.footer-card{
+  position: relative;
+  
+}
+
+.effect{
+  border-radius: 12px;
+  border: 1px solid  #1d1d1b;
+  transition: all .5s ease;
+  overflow: hidden;
+}
+.effect:hover {
+  border-radius: 85px;
+  border: none;
+}
+.effect:hover .footer-card-overlay > img{
+  opacity: 1;
+  scale: 1;
+}
+.effect:hover .footer-card-overlay-title > h1{
+  transform: translate(0, 0);
+}
+.effect:hover .footer-card-title > h1{
+  transform: translate(0, -100%);
+}
+.footer-card-overlay-title > h1{
+  transform: translate(0, 100%);
+  color: white;
+}
+
+.footer-card-title, .footer-card-overlay-title{
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 50%;
+  transform: translate(0, -50%);
+  overflow: hidden;
+  z-index: 10;
+}
+.footer-card-title h1, .footer-card-overlay-title h1{
+  font-weight: normal;
+  font-size: 28px;
+  transition: transform .5s ease;
+}
+
+.footer-card-overlay > img{
+  opacity: 0;
+  scale: 1.2;
+  transition: scale .5s ease, opacity .5s ease;
+}
+
+
+.footer-bar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.footer-bar-left{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-icon{
+  scale: 1;
+  transition: scale .5s ease;
+}
+.footer-icon:hover{
+  scale: 1.1;
+}
+
+
+.footer-bar-right{
+  display: flex;
+  gap: 10px;
+}
+.footer-bar-right p{
+  font-size: 14px;
+}
+.footer-bar-right .flip-effect{
+  position: relative;
+  overflow: hidden;
+}
+.footer-bar-right .flip-effect p:nth-child(1){
+  position: relative;
+  transition: top .5s ease;
+  top: 0%;
+}
+.footer-bar-right .flip-effect p:nth-child(2){
+  position: absolute;
+  top: 100%;
+  transition: top .5s ease;
+}
+.footer-bar-right .flip-effect:hover p:nth-child(2){
+  top: 0;
+}
+.footer-bar-right .flip-effect:hover p:nth-child(1){
+  top: -100%;
 }
